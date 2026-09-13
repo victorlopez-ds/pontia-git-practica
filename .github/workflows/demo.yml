@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mensaje del usuario
-        run: echo "Mensaje del usuario: ${{ github.event.inpunts.mensaje-impreso }}"
+        run: echo "Mensaje del usuario: ${{ github.event.inputs.mensaje }}"
 
