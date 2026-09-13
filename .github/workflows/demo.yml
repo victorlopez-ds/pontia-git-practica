@@ -1,4 +1,5 @@
 name: Workflow manual
+
 on:
   workflow_dispatch:
     inputs:
@@ -6,10 +7,11 @@ on:
         description: 'Mensaje a imprimir'
         required: true
         default: 'Hola mundo!'
+
 jobs:
   mensaje-impreso:
     runs-on: ubuntu-latest
     steps:
       - name: Mensaje del usuario
-        run: echo "Mensaje del usuario: ${{ github.event.inpunts.mensaje-impreso }}"
-
+        run: |
+          echo "Mensaje del usuario: ${{ inputs.mensaje }}"
